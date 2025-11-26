@@ -24,7 +24,7 @@ public class Movie {
         return _title;
     }
 
-    // Refactoring 7 — Passo 1: novo método getCharge
+    // Refactoring 7 — Passo 1: getCharge
     public double getCharge(int daysRented) {
         double thisAmount = 0;
         switch (_priceCode) {
@@ -45,5 +45,13 @@ public class Movie {
                 break;
         }
         return thisAmount;
+    }
+
+    // Refactoring 7 — Passo 2: getFrequentRenterPoints
+    public int getFrequentRenterPoints(int daysRented) {
+        if ((_priceCode == NEW_RELEASE) && daysRented > 1) {
+            return 2;
+        }
+        return 1;
     }
 }

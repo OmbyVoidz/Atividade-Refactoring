@@ -16,15 +16,12 @@ public class Rental {
         return _movie;
     }
 
-    // Refactoring 7 — Passo 1: chama Movie.getCharge
     public double getCharge() {
         return _movie.getCharge(_daysRented);
     }
 
+    // Refactoring 7 — Passo 2: chama Movie.getFrequentRenterPoints
     public int getFrequentRenterPoints() {
-        if ((_movie.getPriceCode() == Movie.NEW_RELEASE) && _daysRented > 1) {
-            return 2;
-        }
-        return 1;
+        return _movie.getFrequentRenterPoints(_daysRented);
     }
 }
