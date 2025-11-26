@@ -8,7 +8,7 @@ public class NewReleasePrice extends Price {
         return daysRented * 3;
     }
 
-    // Bônus para lançamentos com mais de 1 dia
+    // Sobrescreve a versão genérica de Price
     public int getFrequentRenterPoints(int daysRented) {
         return (daysRented > 1) ? 2 : 1;
     }
