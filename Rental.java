@@ -16,7 +16,7 @@ public class Rental {
         return _movie;
     }
 
-    // Refactoring 3 — novo método movido e renomeado
+    // Refactoring 3 — método movido e renomeado
     public double getCharge() {
         double thisAmount = 0;
 
@@ -39,5 +39,14 @@ public class Rental {
         }
 
         return thisAmount;
+    }
+
+    // Refactoring 5 — extrair frequent renter points
+    public int getFrequentRenterPoints() {
+        if ((this.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
+            this.getDaysRented() > 1) {
+            return 2; 
+        }
+        return 1;
     }
 }

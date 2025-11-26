@@ -25,9 +25,10 @@ public class Customer {
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
 
-            frequentRenterPoints++;
+            // soma os pontos usando o método movido para Rental
+            frequentRenterPoints += each.getFrequentRenterPoints();
 
-            // show figures for this rental
+            // show figures
             result += "\t" + each.getMovie().getTitle() + "\t" +
                       String.valueOf(each.getCharge()) + "\n";
         }
