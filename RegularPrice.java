@@ -10,4 +10,6 @@ public class RegularPrice extends Price {
             result += (daysRented - 2) * 1.5;
         return result;
     }
+
+    // Herdado de Price (sem bônus)
 }
