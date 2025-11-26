@@ -36,7 +36,6 @@ public class Movie {
         }
     }
 
-    // Refactoring 7 — Passo 4: delega para Price
     public double getCharge(int daysRented) {
         return _price.getCharge(daysRented);
     }
